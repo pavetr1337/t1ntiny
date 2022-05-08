@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>T1NTINY Code</title>
+    <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+    <h1>T1NTINY Code<span id = "blinking">▋</span></h1>
+    <h2 id="Ticker" href=""></h2>
+    <script type="text/javascript"> 
+    var CharTimeout = 50; // скорость печатания
+    var StoryTimeout = 2000; // время ожидания перед переключением
+
+    var Summaries = new Array();
+    var SiteLinks = new Array();
+
+        Summaries[0] = 'Супермегаультракодер';
+        Summaries[1] = 'Директор Facepunch';
+        Summaries[2] = 'Может забанить вак баном по железу в гаррисе';
+        Summaries[3] = 'Кодер всех гмод серверов';
+        Summaries[4] = 'Доксер всех личностей в мире';
+        Summaries[5] = 'Магистр клоунов в дс серверах';
+        Summaries[6] = 'Миллиардер, лидер списка Forbes';
+
+    function startTicker(){
+        massiveItemCount =  Number(Summaries.length);
+        CurrentStory     = -1;
+        CurrentLength    = 0;
+        AnchorObject     = document.getElementById("Ticker");
+        runTheTicker();     
+    }
+    function runTheTicker(){
+        var myTimeout;
+        if(CurrentLength == 0){
+            CurrentStory++;
+            CurrentStory      = CurrentStory % massiveItemCount;
+            StorySummary      = Summaries[CurrentStory].replace(/"/g,'-');      
+            AnchorObject.href = SiteLinks[CurrentStory];
+        }
+        AnchorObject.innerHTML = StorySummary.substring(0,CurrentLength) + znak();
+        if(CurrentLength != StorySummary.length){
+            CurrentLength++;
+            myTimeout = CharTimeout;
+        } else {
+            CurrentLength = 0;
+            myTimeout = StoryTimeout;
+        }
+        setTimeout("runTheTicker()", myTimeout);
+    }
+    function znak(){
+        if(CurrentLength == StorySummary.length) return "";
+        else return "|";
+    }
+    startTicker();
+    </script>
+    <fieldset>
+        <legend>My skills</legend>
+        <ul>
+            <li>Clown | 1337%</li>
+            <li>C++ | -999999%</li>
+            <li>GLua | -∞%</li>
+        </ul>
+    </fieldset>
+</br>
+        <fieldset>
+        <legend>Награды</legend>
+        <ul>
+            <li>Clown | Pavetr DS</li>
+            <li>Крутой еблан | Pavetr DS</li>
+        </ul>
+    </fieldset>
+    </br>
+            <fieldset>
+        <legend>Мои секс-партнеры</legend>
+        <ul>
+            <li>TravkaCode</li>
+            <li>C_E_R_E_B_R_O</li>
+            <li>Urbanichka</li>
+        </ul>
+    </fieldset>
+        </br>
+            <fieldset>
+        <legend>Мои проекты</legend>
+        <ul>
+        </ul>
+    </fieldset>
+</br> <h4>Designed by Pavetr</h4>
+ </body>
+</html>
