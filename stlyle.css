@@ -1,0 +1,47 @@
+body {
+  background-color: gray;
+}
+H1 {
+  color: #000080;
+  font-size: 200%;
+  font-family: Monospace, Consolas, sans-serif;
+  text-align: center;
+}
+p {
+  color: #000080;
+  font-family: Monospace, Consolas, sans-serif;
+}
+li {
+  color: #000080;
+  font-family: Monospace, Consolas, sans-serif;
+}
+H2 {
+  color: #000080;
+  font-size: 110%;
+  font-family: Monospace, Consolas, sans-serif;
+  text-align: center;
+  text-decoration: underline;
+}
+H4 {
+  color: #000080;
+  font-size: 110%;
+  font-family: Monospace, Consolas, sans-serif;
+  text-align: center;
+}
+#blinking {  
+  animation: blink 400ms alternate infinite;
+}
+@keyframes blink {
+  from {
+  opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+legend {
+    background-color: #000080;
+    color: gray;
+    font-family: Monospace, Consolas, sans-serif;
+    padding: 3px 6px;
+}
