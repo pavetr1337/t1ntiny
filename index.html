@@ -6,9 +6,11 @@
   <style>body {
   background-color: gray;
 }
-body::selection{
-color: #8ebf42;
-background-color: initial;
+::selection {
+background: #ffb7b7; /* Safari */
+}
+::-moz-selection {
+background: #ffb7b7; /* Firefox */
 }
 H1 {
   color: #000080;
